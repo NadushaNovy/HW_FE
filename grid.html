@@ -16,11 +16,18 @@
       .wrapper {
         height: 100%;
       }
-      .wrapper > div {
+      .wrapper > .sidebar, .header, .banner {
         background: rgba(0, 255, 68, 0.737);
       }
+      .wrapper > .menu, .main2, .main3 {
+        background: red;
+      }
+      .wrapper > .main1, .main4 {
+        background: gold;
+      }
+       
+      
     .wrapper {
-    margin: 50px 100px ;
       display: grid;
         grid-template-rows: repeat(3, 150px);
         grid-template-columns: repeat(4, 300px);
@@ -29,9 +36,12 @@
         "sidebar main1 main2 banner"
         "sidebar main3 main4 banner";
         gap: 10px;
+        justify-content: center;
+    
     
       }
       .sidebar {
+
         grid-area: sidebar;
         
       }
@@ -44,10 +54,7 @@
       .banner {
         grid-area: banner;
       }
-      .footer {
-        grid-area: main1;
-         
-      }
+      
       .main1 {
         grid-area: main1;
       }

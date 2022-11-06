@@ -142,9 +142,16 @@
         font-size: 48px;
         color: var(--main-color);
       }
+      button {
+        display: none;
+      }
       @media (max-width:768px) {
         .menu {
           display: none;
+        }
+        button {
+          display: inline;
+          font-size: 24px;
         }
         .wrapper {
           margin-left: 1rem;
@@ -197,7 +204,9 @@
           <a href="">Question</a>
 
           <a class="started" href="">Get started</a>
+          
         </nav>
+        <button><i class="las la-bars"></i></button>
       </header>
 
       <main class="center">
@@ -229,7 +238,7 @@
             />
           </figure>
         
-      </main>>
+      </main>
 
       <section class="down">
         <div class="Options">

@@ -36,6 +36,7 @@
       }
       .head {
         display: flex;
+        height: 15%;
 
         justify-content: space-between;
         align-items: center;
@@ -49,12 +50,12 @@
       }
 
       .started {
-        border-radius: 30px;
-        padding: 5px;
+        border-radius: 50px;
+        padding: 12px;
         margin-left: 35px;
         background: var(--main-color);
         color: white;
-        font-size: 14px;
+        font-size: 18px;
       }
 
       .logo i {
@@ -142,22 +143,31 @@
         font-size: 48px;
         color: var(--main-color);
       }
-      button {
+      .menu-burger {
         display: none;
       }
       @media (max-width:768px) {
         .menu {
           display: none;
         }
-        button {
+        .menu-burger {
           display: inline;
-          font-size: 24px;
+
+        }
+        .button {
+          display: inline;
+          font-size: 18px;
         }
         .wrapper {
-          margin-left: 1rem;
+          margin-left: 2rem;
         }
         .head {
-          margin: 5px;
+          margin-bottom: 5px;
+          height: 5%;
+          justify-content: flex-start;
+          gap: 13rem;
+          
+          
         }
         .center {
           display: block;
@@ -168,6 +178,19 @@
         h1 {
           font-size: 30px;
           line-height:  2rem;
+        }
+        .center-left {
+          line-height: 1.5rem;
+          width: 200px;
+        }
+        .link {
+          margin: 20px 10px;
+        }
+        .link i {
+          font-size: ;
+        }
+        img {
+          width: 70%;
         }
         
         body {
@@ -206,7 +229,7 @@
           <a class="started" href="">Get started</a>
           
         </nav>
-        <button><i class="las la-bars"></i></button>
+        <button class="menu-burger"><i class="las la-bars"></i></button>
       </header>
 
       <main class="center">

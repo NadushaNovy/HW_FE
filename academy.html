@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academy</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+      body {
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        justify-content: center;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body,
+      .wrapper {
+        height: 100%;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 200px auto 250px;
+        width: 960px;
+        gap: 15px;
+      }
+      .sidebar {
+        background: gold;
+      }
+      main {
+        background: white;
+      }
+      .userbar {
+        background: lightgrey;
+      }
+      .main-header {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      .head-right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .search {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        width: 180px;
+        border-radius: 12px;
+        padding-left: 10px;
+      }
+      .search__input {
+        border: none;
+        font-size: 10px;
+        padding: 10px;
+      }
+      .search__input:focus {
+        outline: none;
+      }
+      .search__icons {
+        font-size: 16px;
+        color: grey;
+      }
+      .bell {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        width: 30px;
+        border-radius: 8px;
+        aspect-ratio: 1;
+        padding: 6px;
+        font-size: 18px;
+        color: gray;
+        border-style: none;
+      }
+      .subtitle {
+        font-size: 18px;
+         font-weight: 500;
+      }
+      .new-courses {
+        padding-top: 30px;
+      }
+      .new-courses__list {
+        display: flex;
+        gap: 8px;
+        padding-top: 30px;
+      }
+      .new-corses__list__item {
+        padding: 8px;
+        
+        border-radius: 18px;
+      }
+      .new-corses__list__item__picture {
+        width: 150px;
+        height: 100px;
+        border-radius: 15px;
+      }
+      .new-corses__list__item--bcg-orange {
+        background: #fff0e1;
+      }
+      .new-corses__list__item--bcg-violet {
+        background: #e9e3fe;
+      }
+      .new-corses__list__item--bcg-blue {
+        background: #e5f3fe;
+      }
+
+      .new-corses__list__item__picture--bcg-orange {
+        background: #fcab5e;
+      }
+      .new-corses__list__item__picture--bcg-violet {
+        background: #8a70d6;
+      }
+      .new-corses__list__item__picture--bcg-blue {
+        background: #579be4;
+      }
+      .guests {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 35px;
+      }
+      .guests__control {
+        width: 30px;
+        aspect-ratio: 1;
+        border-radius: 8px;
+        border-style: none;
+      }
+      .guests__control--bcg-orange {
+        background: #fcab5e;
+      }
+      .guests__control--bcg-violet {
+        background: #8a70d6;
+      }
+      .guests__control--bcg-blue {
+        background: #579be4;
+      }
+
+      .guests__avatar img {
+        border-radius: 40px;
+      }
+      h4 {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 10px 0;
+      }
+      p {
+        font-size: 12px;
+      }
+      .usebar__profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+      }
+      .pencil {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        width: 30px;
+        border-radius: 8px;
+        aspect-ratio: 1;
+        padding: 6px;
+        font-size: 18px;
+        color: gray;
+        border-style: none;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar"></aside>
+
+      <main>
+        <header class="main-header">
+          <h1>Dashboard</h1>
+          <div class="head-right">
+            <div class="search">
+              <span class="search__icons">
+                <i class="las la-search"></i>
+              </span>
+              <input type="text" class="search__input" placeholder="Search" />
+            </div>
+            <button class="bell">
+              <i class="las la-bell"></i>
+            </button>
+          </div>
+        </header>
+
+        <section class="new-courses">
+          <h2 class="subtitle">New Courses</h2>
+          <div class="new-courses__list">
+            <div
+              class="new-corses__list__item new-corses__list__item--bcg-orange"
+            >
+              <figure
+                class="new-corses__list__item__picture new-corses__list__item__picture--bcg-orange"
+              ></figure>
+              <h4>Geography</h4>
+              <p>12 lessons</p>
+              <div class="guests">
+                <figure class="guests__avatar">
+                  <img src="https://via.placeholder.com/30x30" alt="" />
+                  <img src="https://via.placeholder.com/30x30" alt="" />
+                  <img src="https://via.placeholder.com/30x30" alt="" />
+                </figure>
+                <button class="guests__control guests__control--bcg-orange">
+                  <i class="las la-angle-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="new-corses__list__item new-corses__list__item--bcg-violet"
+            >
+              <figure
+                class="new-corses__list__item__picture new-corses__list__item__picture--bcg-violet"
+              ></figure>
+              <h4>JavaScript Course</h4>
+              <p>15 lessons</p>
+              <div class="guests">
+                <figure class="guests__avatar">
+                  <img src="https://via.placeholder.com/30x30" alt="" />
+                  <img src="https://via.placeholder.com/30x30" alt="" />
+                  <img src="https://via.placeholder.com/30x30" alt="" />
+                </figure>
+                <button class="guests__control guests__control--bcg-violet">
+                  <i class="las la-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div
+              class="new-corses__list__item new-corses__list__item--bcg-blue"
+            >
+              <figure
+                class="new-corses__list__item__picture new-corses__list__item__picture--bcg-blue"
+              ></figure>
+              <h4>Photography Course</h4>
+              <p>8 lessons</p>
+              <div class="guests">
+                <figure class="guests__avatar">
+                  <img src="https://via.placeholder.com/30x30" alt="" />
+                  <img src="https://via.placeholder.com/30x30" alt="" />
+                  <img src="https://via.placeholder.com/30x30" alt="" />
+                </figure>
+                <button class="guests__control guests__control--bcg-blue">
+                  <i class="las la-angle-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="userbar">
+        <header class="usebar__profile">
+            <h2 class="subtitle">
+                Profile 
+            </h2>
+            <button class="pencil">
+                <i class="las la-pencil-alt"></i>
+            </button>
+        </header>
+      </div>
+    </div>
+  </body>
+</html>

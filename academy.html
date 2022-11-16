@@ -35,18 +35,10 @@
         grid-template-columns: 200px auto 250px;
         width: 960px;
         gap: 15px;
-      }
-      .sidebar {
-        background: gold;
-      }
-      main {
-        background: white;
-      }
-      .userbar {
-        background: lightgrey;
-      }
-      .main-header {
         padding-top: 10px;
+      }
+
+      .main-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -54,7 +46,7 @@
       h1 {
         font-size: 22px;
       }
-      .head-right {
+      .main-header__right {
         display: flex;
         align-items: center;
         gap: 5px;
@@ -155,19 +147,26 @@
       .guests__avatar img {
         border-radius: 40px;
       }
+      .guests__avatar--second {
+        margin-left: -50px;
+      }
+      .guests__avatar--third img {
+        margin-left: -50px;
+      }
+
       h4 {
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 500;
         padding: 10px 0;
       }
       p {
         font-size: 12px;
+        color: grey;
       }
-      .usebar__profile {
+      .usebar__head {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 10px;
       }
       .pencil {
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
@@ -175,21 +174,214 @@
         width: 30px;
         border-radius: 8px;
         aspect-ratio: 1;
-        padding: 6px;
         font-size: 18px;
         color: gray;
         border-style: none;
+      }
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+      .profile__avatar img {
+        border-radius: 30px;
+      }
+
+      h4 i {
+        border-radius: 15px;
+        background: #8a70d6;
+        color: white;
+      }
+      .profile__status {
+        color: grey;
+      }
+      .userbar__calendar {
+        width: 100%;
+      }
+      h3 {
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .calendar {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+      .calendar li {
+        list-style: none;
+        width: calc(100% / 7);
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+      }
+      .calendar--data-grey {
+        color: grey;
+      }
+      .month {
+        display: flex;
+        justify-content: space-between;
+      }
+      .month__control__button {
+        border-style: none;
+        background: none;
+      }
+      .month__control__button:hover {
+        border-style: solid;
+        border-color: #8a70d6;
+      }
+      .calendar li:hover {
+        border: 1px solid #8a70d6;
+        background: #8a70d6;
+        border-radius: 30px;
+      }
+      .homework-progress__button {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        border-radius: 15px;
+        border-style: none;
+        background: none;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        margin-top: 10px;
+      }
+      .homework-progress__button__value {
+        margin-left: -5rem;
+      }
+      .homework-progress__button__value--second {
+        margin-left: -3rem;
+      }
+      .homework-progress__button__value--third {
+        margin-left: -40px;
+      }
+      .homework-progress__button__value p {
+        text-align: left;
+      }
+      .homework-progress__button__picture img {
+        border-radius: 25px;
+      }
+      .homework-progress__button:hover {
+        background: #8a70d6;
+        color: white;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo__word {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .menu {
+        margin-top: 28px;
+      }
+      .menu__item {
+        list-style: none;
+        font-size: 14px;
+        padding: 15px;
+        color: grey;
+      }
+      .menu__item span {
+        margin-left: 5px;
+      }
+      .menu__item:hover {
+        background: #e9e3fe;
+        border-radius: 10px;
+        font-weight: 500;
+        color: black;
+      }
+      .add-info {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        background: #e9e3fe;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+      }
+      .add-info span {
+        text-align: center;
+        font-size: 13px;
+      }
+      .add-info__subtitle {
+        margin-top: 27%;
+      }
+      .add-info__button {
+        margin-top: 20px;
+        background: #8a70d6;
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border-style: none;
+        color: white;
+      }
+      .add-info__picture {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -45px;
+        margin-top: 20px;
       }
     </style>
   </head>
   <body>
     <div class="wrapper">
-      <aside class="sidebar"></aside>
+      <aside class="sidebar">
+        <div class="logo">
+          <figure class="logo__picture">
+            <img src="https://via.placeholder.com/25x20" alt="" />
+          </figure>
+          <span class="logo__word">Academy</span>
+        </div>
+        <menu>
+          <ul class="menu">
+            <li class="menu__item">
+              <i class="las la-envelope-open"></i>
+              <span>Dashboard</span>
+            </li>
+            <li class="menu__item">
+              <i class="las la-briefcase"></i>
+              <span> Courses </span>
+            </li>
+            <li class="menu__item">
+              <i class="las la-sms"></i>
+              <span>Chats</span>
+            </li>
+            <li class="menu__item">
+              <i class="las la-chart-bar"></i>
+              <span>Grades</span>
+            </li>
+            <li class="menu__item">
+              <i class="las la-calendar-week"> </i>
+              <span>Shedule</span>
+            </li>
+            <li class="menu__item">
+              <i class="las la-cog"></i>
+              <span>Settings</span>
+            </li>
+          </ul>
+        </menu>
+        <figure class="add-info__picture">
+          <img src="https://via.placeholder.com/80x120" alt="" />
+        </figure>
+        <div class="add-info">
+          <h4 class="add-info__subtitle">Premium subscription</h4>
+          <span>Buy Premium get access to new courses</span>
+          <button class="add-info__button">More detailied</button>
+        </div>
+      </aside>
 
       <main>
         <header class="main-header">
           <h1>Dashboard</h1>
-          <div class="head-right">
+          <div class="main-header__right">
             <div class="search">
               <span class="search__icons">
                 <i class="las la-search"></i>
@@ -216,7 +408,11 @@
               <div class="guests">
                 <figure class="guests__avatar">
                   <img src="https://via.placeholder.com/30x30" alt="" />
+                </figure>
+                <figure class="guests__avatar guests__avatar--second">
                   <img src="https://via.placeholder.com/30x30" alt="" />
+                </figure>
+                <figure class="guests__avatar guests__avatar--third">
                   <img src="https://via.placeholder.com/30x30" alt="" />
                 </figure>
                 <button class="guests__control guests__control--bcg-orange">
@@ -236,7 +432,11 @@
               <div class="guests">
                 <figure class="guests__avatar">
                   <img src="https://via.placeholder.com/30x30" alt="" />
+                </figure>
+                <figure class="guests__avatar guests__avatar--second">
                   <img src="https://via.placeholder.com/30x30" alt="" />
+                </figure>
+                <figure class="guests__avatar guests__avatar--third">
                   <img src="https://via.placeholder.com/30x30" alt="" />
                 </figure>
                 <button class="guests__control guests__control--bcg-violet">
@@ -255,7 +455,11 @@
               <div class="guests">
                 <figure class="guests__avatar">
                   <img src="https://via.placeholder.com/30x30" alt="" />
+                </figure>
+                <figure class="guests__avatar guests__avatar--second">
                   <img src="https://via.placeholder.com/30x30" alt="" />
+                </figure>
+                <figure class="guests__avatar guests__avatar--third">
                   <img src="https://via.placeholder.com/30x30" alt="" />
                 </figure>
                 <button class="guests__control guests__control--bcg-blue">
@@ -268,17 +472,123 @@
       </main>
 
       <div class="userbar">
-        <header class="usebar__profile">
+        <header class="usebar__head">
           <h2 class="subtitle">Profile</h2>
           <button class="pencil">
             <i class="las la-pencil-alt"></i>
           </button>
         </header>
         <div class="profile">
-            <figure class="profile__avatar"></figure>
-            <h4 class="profile__name"></h4>
-            <p class="profile__status"></p>
+          <figure class="profile__avatar">
+            <img src="https://via.placeholder.com/60x60" alt="" />
+          </figure>
+          <h4 class="profile__name">
+            Esther Howard
+            <i class="las la-check"></i>
+          </h4>
+          <p class="profile__status">Elementary</p>
         </div>
+        <section class="usebar__calendar">
+          <div class="month">
+            <h3>May 2022</h3>
+            <div class="month__control">
+              <button class="month__control__button">
+                <i class="las la-angle-left"></i>
+              </button>
+              <button class="month__control__button">
+                <i class="las la-angle-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <ul class="calendar">
+            <li class="is-bold">Sun</li>
+            <li class="is-bold">Mon</li>
+            <li class="is-bold">Tue</li>
+            <li class="is-bold">Wen</li>
+            <li class="is-bold">Thu</li>
+            <li class="is-bold">Fri</li>
+            <li class="is-bold">Sat</li>
+
+            <li class="calendar--data-grey">28</li>
+            <li class="calendar--data-grey">29</li>
+            <li class="calendar--data-grey">30</li>
+            <li class="calendar--data-grey">31</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+          </ul>
+        </section>
+        <section class="homework-progress">
+          <h2 class="homework-progress__subtitle subtitle">
+            Homework progress
+          </h2>
+          <button class="homework-progress__button">
+            <figure class="homework-progress__button__picture">
+              <img src="https://via.placeholder.com/30x30" alt="" />
+            </figure>
+            <div class="homework-progress__button__value">
+              <h5>Styling with CSS</h5>
+              <p>12 tasks</p>
+            </div>
+
+            <i class="las la-angle-right"></i>
+          </button>
+          <button class="homework-progress__button">
+            <figure class="homework-progress__button__picture">
+              <img src="https://via.placeholder.com/30x30" alt="" />
+            </figure>
+            <div
+              class="homework-progress__button__value homework-progress__button__value--second"
+            >
+              <h5>Basics of programming</h5>
+              <p>18 tasks</p>
+            </div>
+
+            <i class="las la-angle-right"></i>
+          </button>
+          <button class="homework-progress__button">
+            <figure class="homework-progress__button__picture">
+              <img src="https://via.placeholder.com/30x30" alt="" />
+            </figure>
+            <div
+              class="homework-progress__button__value homework-progress__button__value--third"
+            >
+              <h5>Learn to Program in Java</h5>
+              <p>10 tasks</p>
+            </div>
+
+            <i class="las la-angle-right"></i>
+          </button>
+        </section>
       </div>
     </div>
   </body>
